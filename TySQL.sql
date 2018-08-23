@@ -6,7 +6,7 @@ from actor;
 
 -- 1b. Display the first and last name of each actor in a single column 
 -- in upper case letters. Name the column Actor Name.
-select first_name  as 'Actor Name'
+select concat(first_name," ", last_name) as 'Actor Name'
 from actor
 union 
 select last_name 
@@ -32,8 +32,8 @@ where last_name like '%GEN%';
 -- This time, order the rows by last name and first name, in that order: 
 select last_name, first_name
 from actor 
-where last_name like '%LI%';
-
+where last_name like '%LI%'
+order by last_name, first_name;
 -- 2d. Using IN, display the country_id and country columns of the following 
 -- countries: Afghanistan, Bangladesh, and China:
 select * from country;
@@ -150,10 +150,10 @@ inner join address on staff.address_id = address.address_id;
   -- display the titles of movies starting with the letters K and Q whose language is English.
 select * from film;
 select * from language;
-
+use sakila;
 select title
 from film 
-where title like 'K%' or 'Q%' and language_id = 1;
+where title like 'K%' or title like 'Q%' and language_id = 1;
 
 -- 7b. Use subqueries to display all actors who appear in the film Alone Trip.
 select * from film;
