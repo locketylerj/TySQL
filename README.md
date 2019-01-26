@@ -1,10 +1,8 @@
-# Homework Assignment
 
-## Installation Instructions
 
-* Refer to the [installation guide](Installation.md) to install the necessary files.
+## SQL Query of Sakilla database
 
-## Instructions
+## Queries Completed. 
 
 * 1a. Display the first and last names of all actors from the table `actor`.
 
@@ -42,11 +40,7 @@
 
 * 6d. How many copies of the film `Hunchback Impossible` exist in the inventory system?
 
-* 6e. Using the tables `payment` and `customer` and the `JOIN` command, list the total paid by each customer. List the customers alphabetically by last name:
-
-  ```
-  	![Total amount paid](Images/total_payment.png)
-  ```
+* 6e. Using the tables `payment` and `customer` and the `JOIN` command, list the total paid by each customer. List the customers alphabetically by last name
 
 * 7a. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters `K` and `Q` have also soared in popularity. Use subqueries to display the titles of movies starting with the letters `K` and `Q` whose language is English.
 
@@ -62,17 +56,15 @@
 
 * 7g. Write a query to display for each store its store ID, city, and country.
 
-* 7h. List the top five genres in gross revenue in descending order. (**Hint**: you may need to use the following tables: category, film_category, inventory, payment, and rental.)
+* 7h. List the top five genres in gross revenue in descending order. 
 
-* 8a. In your new role as an executive, you would like to have an easy way of viewing the Top five genres by gross revenue. Use the solution from the problem above to create a view. If you haven't solved 7h, you can substitute another query to create a view.
+* 8a. Create view of the Top five genres by gross revenue. Use the solution from the problem above to create a view. 
 
-* 8b. How would you display the view that you created in 8a?
+* 8b. Display the view created in 8a
 
-* 8c. You find that you no longer need the view `top_five_genres`. Write a query to delete it.
+* 8c. Write a query to delete the view `top_five_genres`.
 
 ## Appendix: List of Tables in the Sakila DB
-
-* A schema is also available as `sakila_schema.svg`. Open it with a browser to view.
 
 ```sql
 	'actor'
@@ -100,10 +92,4 @@
 	'store'
 ```
 
-## Uploading Homework
 
-* To submit this homework using BootCampSpot:
-
-  * Create a GitHub repository.
-  * Upload your .sql file with the completed queries.
-  * Submit a link to your GitHub repo through BootCampSpot.

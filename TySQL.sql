@@ -6,10 +6,7 @@ from actor;
 
 -- 1b. Display the first and last name of each actor in a single column 
 -- in upper case letters. Name the column Actor Name.
-select concat(first_name," ", last_name) as 'Actor Name'
-from actor
-union 
-select last_name 
+select upper(concat(first_name," ", last_name)) as 'Actor Name'
 from actor;
 
 /* 2a. You need to find the ID number, first name, and last name of an actor, 
@@ -63,7 +60,6 @@ add Description blob;
   
   -- 4b. List last names of actors and the number of actors who have that last name, but 
   -- only for names that are shared by at least two actors
-  select * from actor;
   select last_name, count(*)
   from actor
   group by last_name
@@ -136,8 +132,6 @@ inner join address on staff.address_id = address.address_id;
   
   -- 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. 
   -- List the customers alphabetically by last name
-  select * from customer;
-  select * from payment;
   
   select customer.first_name, customer.last_name, sum(payment.amount) as 'Total Paid'
   from customer
